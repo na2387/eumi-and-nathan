@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: calc(50% - 50px) 100px calc(50% - 50px);
+    grid-template-rows: 100vh 70vh 70vh 10vh;
+    grid-template-areas:
+        "celebrate arrow landing"
+        "photo arrow about"
+        "location arrow landscapePhoto"
+        "nada MTK nada2";
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#text-one{
+    grid-area: celebrate;
+    align-items: center;
+    vertical-align: middle;
+    min-width: 500px;
+}
+
+.arrow{
+    grid-area: arrow;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing{
+    grid-area: landing;
+}
+
+#text-two{
+    grid-area: about;
+}
+
+#nathan-eumi{
+    grid-area: photo;
+}
+
+#text-three{
+    grid-area: location;
+}
+
+#venue{
+    grid-area: landscapePhoto;
+}
+
+#footer-text{
+    grid-area: MTK;
+    align-items: center;
+    justify-items: center;
+}
+
+hr {
+    height: 2px;
+    width: 100%;
+    margin: 45px auto;
+}
+
+#image-and-text{
+    position: relative;
+    overflow: hidden;
+}
+
+/* text */
+
+#text-one h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    font-size: 120px;
+    text-align: center;
+}
+
+.text-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: left;
+    letter-spacing: 10px;
+}
+
+#landing{
+    fill: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    word-spacing: 38px;
+    letter-spacing: 4px;
+    text-orientation: upright;
+}
+
+.text-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+#our-story {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#location {
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+footer {
+    fill: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    word-spacing: 14px;
+    letter-spacing: 4px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: -105%;
+    margin-right: -100%;
+
+}
+
+/* images */
+
+svg{
+    display: block;
+    margin: auto;
+    min-width: 560px;
+    max-width: 660px;
+    height: auto;
+    min-height: 770px;
+}
+
+#arrow{
+    /*min-width: 80px;
+    max-width: 100px;*/
+    width: 90px;
+    overflow: hidden;
+    height: 0%;
+    position: fixed;
+    z-index: 0;
+}
+
+#cream {
+    -webkit-transform: scaleX(-1);
+    left: 15%;
+    min-width: 470px;
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+#swiped-right {
+    position: absolute;
+    display: inline;
+    top: 15%;
+    left: 0%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: transparent;
+    white-space: nowrap;
+}
+

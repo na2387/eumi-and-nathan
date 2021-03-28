@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E+N</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <article class="item text" id="text-one">
+            <h1>Come</h1>
+            <h1 class="dancing">celebrate</h1>
+            <h1>with us</h1>
+        </article>
+        <div class="arrow">
+            <img src="./assets/arrow/full%20arrow.png" id="arrow">
+        </div>
+        <div class="item imageContainer" id="landing">
+            <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="orange" patternUnits="userSpaceOnUse" width="100%" height="100%">
+                        <image href="./assets/orange.jpg" x="10" y="0" width="110%" height="110%"/>
+                    </pattern>
+                </defs>
+                <path id="ellipse" d="M 100, 55 a 80,110 0 1,0 1,0 z" fill="url(#orange)"/>
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-49 80 400 215">
+                    <path fill="none" id="text-path" d="M8.14,130.94C40.33,64.58,88.92,20.44,150,20.44s114.67,44.14,144.86,110.5"/>
+                    <text alignment-baseline="top" width="50" fill="none" class="letters2">
+                        <textPath xlink:href="#text-path">
+                            WOOHOO! YIPPEE! HOORAY!
+                        </textPath>
+                    </text>
+                </svg>
+            </svg>
+        </div>
+        <article class="item text" id="text-two">
+            <article class="text-box" id="our-story">
+            <h2>EUMI + NATHAN</h2>
+            <hr/>
+            <p>Nathan was at a wedding in California when he saw that Eumi had swiped right, too. Eumi was _____ when
+             Nathan suggested a first date on the High Line. We met in person, talked for hours, got dinner, and made plans to have
+             a second date the next week.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.</p>
+            </article>
+        </article>
+        <div class="item imageContainer" id="nathan-eumi">
+            <div id="image-and-text">
+                <img id="cream" src="./assets/cream.jpg"/>
+                <div id="swiped-right">we swiped right</div>
+            </div>
+        </div>
+        <article class="item text" id="text-three">
+            <article class="text-box" id="location">
+            <h2>WHEREABOUTS</h2>
+            <hr/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.</p>
+            </article>>
+        </article>
+        <div class="item imageContainer" id="venue"></div>
+        <footer id="footer-text">MORE TO COME</footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+        var individualLetters = document.querySelector('.dancing');
+        individualLetters.innerHTML = individualLetters.textContent.replace(/\S/g, "<span class='dancers'>$&</span>");
+        var tl = anime.timeline({
+            loop: true,
+            delay: 1000
+        })
+
+         anime({
+                targets: '.dancers',
+                /* letterSpacing: '10px', */
+                scale: [8, 1],
+                transformBox: 'scale(-1, 1)',
+                delay: 500,
+                easing: 'spring(1, 80, 10, 0)',
+                duration: 1000,
+                loop: true,
+                direction: 'alternate',
+            })
+
+        anime({
+            targets: '#arrow',
+            height: '+=85%',
+            duration: 1000,
+            delay: 500,
+            loop: false,
+            easing: 'easeOutQuad'
+        }).finished.then(()=>
+            anime({
+                targets: '#arrow',
+                loop: true,
+                height: '+=3%',
+                easing: 'easeOutQuad',
+                direction: 'alternate'
+            }))
+
+        anime({
+            targets: '.letters2',
+            //translateX: path('x'),
+            translateY: -35,
+            //easing: 'easeInOutQuad',
+            fill: '#000000',
+            duration: 1950,
+            delay: 1000,
+            loop: true,
+            direction: 'alternate'
+        })
+
+        tl.add({
+            targets: '#swiped-right',
+            left: '45%',
+            color: '#000000',
+            duration: 1500,
+        })
+        .add({
+            targets: '#swiped-right',
+            left: '+=0',
+            duration: 400
+        })
+        .add({
+            targets: '#swiped-right',
+            left: '+=60%',
+            color: '#ffffff',
+            duration: 1500
+        })
+
+    </script>
+</body>
+</html>
