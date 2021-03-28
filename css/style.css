@@ -9,7 +9,7 @@
     display: grid;
     overflow: hidden;
     grid-template-columns: calc(50% - 50px) 100px calc(50% - 50px);
-    grid-template-rows: 100vh 70vh 70vh 10vh;
+    grid-template-rows: minmax(661px, 100vh) minmax(650px, 70vh) minmax(650px, 70vh) 10vh;
     grid-template-areas:
         "celebrate arrow landing"
         "photo arrow about"
