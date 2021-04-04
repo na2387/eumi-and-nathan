@@ -1,9 +1,3 @@
-import anime from 'animejs/lib/anime.es';
-
-var animeJsScript = document.createElement('script');
-animeJsScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js');
-
-
 // Initialize and add the map
 function initMap() {
     // The location of Portico
@@ -20,4 +14,3 @@ function initMap() {
         map: map,
     });
 }
-
