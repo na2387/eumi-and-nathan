@@ -7,9 +7,9 @@
 
 .container{
     display: grid;
-    overflow: hidden;
-    grid-template-columns: calc(50% - 50px) 100px calc(50% - 50px);
-    grid-template-rows: minmax(661px, 100vh) minmax(650px, 70vh) minmax(650px, 70vh) 10vh;
+    /* overflow: hidden; */
+    grid-template-columns: minmax(494px, calc(50% - 50px)) 100px minmax(494px, calc(50% - 50px));
+    grid-template-rows: minmax(671px, 100vh) minmax(670px, 70vh) minmax(670px, 70vh) 10vh;
     grid-template-areas:
         "celebrate arrow landing"
         "photo arrow about"
@@ -35,6 +35,12 @@
     grid-area: arrow;
     align-items: center;
     justify-content: center;
+}
+
+@media all and (max-width: 1105px) {
+    .arrow{
+        right: 50%;
+    }
 }
 
 #landing{
@@ -66,7 +72,7 @@
 hr {
     height: 2px;
     width: 100%;
-    margin: 45px auto;
+    margin: 28px auto 30px auto;
 }
 
 #image-and-text{
@@ -83,14 +89,6 @@ hr {
     text-align: center;
 }
 
-.text-box h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    text-align: left;
-    letter-spacing: 10px;
-}
-
 #landing{
     fill: black;
     font-family: 'Montserrat', sans-serif;
@@ -101,11 +99,29 @@ hr {
     text-orientation: upright;
 }
 
+.text-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: left;
+    letter-spacing: 10px;
+}
+
+.text-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    word-spacing: 1px;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
 .text-box p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     text-align: left;
     overflow-wrap: break-word;
+    margin-bottom: 10px;
 }
 
 #our-story {
@@ -122,8 +138,8 @@ footer {
     fill: black;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 14px;
-    word-spacing: 14px;
+    font-size: 16px;
+    word-spacing: 7px;
     letter-spacing: 4px;
     text-align: center;
     white-space: nowrap;
