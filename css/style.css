@@ -213,3 +213,144 @@ svg{
     top: -20px;
     left: 130px;
 }
+
+/* media queries */
+
+/* iPad Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+}
+
+/* iPad Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .container{
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: 100%;
+        grid-template-rows: 600px 900px 1950px 1100px 600px 1000px 200px; /*50vh 50vh 50vh 50vh 10vh*/
+        grid-template-areas:
+        "celebrate"
+        "landing"
+        "about"
+        "photo"
+        "location"
+        "landscapePhoto"
+        "MTK";
+    }
+
+   /* #text-one{
+        margin-bottom: -50%;
+        margin-top: -60%;
+    }*/
+
+    #landing{
+        margin-bottom: 30px;
+    }
+
+    #our-story{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    #swiped-right{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    #tile-one{
+        margin-left: 15%;
+    }
+
+    svg{
+        min-height: 970px;
+    }
+
+    #cream{
+        left: 8%;
+    }
+
+    #swiped-right{
+        display: none;
+    }
+
+    #location{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    #tile-one{
+        margin-left: 8%;
+    }
+
+    #house-image{
+        width: 660px;
+        height: 600px;
+    }
+
+    #map{
+        width: 680px;
+        height: 500px;
+    }
+
+    footer{
+        font-size: 25px;
+        margin-top: 100px
+    }
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+}
