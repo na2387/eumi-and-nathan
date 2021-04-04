@@ -19,7 +19,7 @@
         <img src="./assets/arrow/full%20arrow.png" id="arrow">
     </div>
     <div class="item imageContainer" id="landing">
-        <svg viewBox="0 20 200 300" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 18 200 300" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <pattern id="orange" patternUnits="userSpaceOnUse" width="100%" height="100%">
                     <image href="./assets/orange.jpg" x="10" y="0" width="110%" height="110%"/>
@@ -29,7 +29,7 @@
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-49 80 400 215">
                 <path fill="none" id="text-path"
                       d="M8.14,130.94C40.33,64.58,88.92,20.44,150,20.44s114.67,44.14,144.86,110.5"/>
-                <text alignment-baseline="top" width="50" fill="none" class="letters2">
+                <text alignment-baseline="top" width="50" fill="none" class="letters">
                     <textPath xlink:href="#text-path">
                         WOOHOO! YIPPEE! HOORAY!
                     </textPath>
@@ -42,7 +42,7 @@
             <h2>3 TINY LOVE STORIES</h2>
             <hr/>
             <h3>TINY STORY 1</h3>
-            <p>Eumi was impressed Nathan didn’t suggest the typical Tinder date at a bar. Really, though, Nathan had
+            <p>Eumi was impressed Nathan didn’t suggest the typical Tinder date at a bar. In actuality, Nathan had
                 brainstormed with friends at his local coffee shop. The consensus was the High Line. Later, Nathan told
                 her he had help with the idea and Eumi shared that she was so excited at the change of pace she wore her
                 lucky skirt. Both were so charmed by each that they pocketed the story for this moment.</p>
@@ -94,6 +94,11 @@
         delay: 1000
     })
 
+    var lettersTl = anime.timeline({
+        loop: true,
+        direction: 'alternate'
+    })
+
     anime({
         targets: '.dancers',
         /* letterSpacing: '10px', */
@@ -121,17 +126,18 @@
             direction: 'alternate'
         }))
 
-    anime({
-        targets: '.letters2',
-        //translateX: path('x'),
+    lettersTl.add({
+        targets: '.letters',
         translateY: -35,
         //easing: 'easeInOutQuad',
-        fill: '#000000',
-        duration: 1950,
-        delay: 1000,
-        loop: true,
-        direction: 'alternate'
+        duration: 350,
+        delay: 300,
     })
+        .add({
+            targets: '.letters',
+            delay: 200,
+            fill: '#000000'
+        })
 
     tl.add({
         targets: '#swiped-right',
