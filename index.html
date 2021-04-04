@@ -41,23 +41,23 @@
         <article class="text-box" id="our-story">
             <h2>3 TINY LOVE STORIES</h2>
             <hr/>
-            <h3>TINY STORY 1</h3>
-            <p>Eumi was impressed Nathan didn’t suggest the typical Tinder date at a bar. In actuality, Nathan had
-                brainstormed with friends at his local coffee shop. The consensus was the High Line. Later, Nathan told
-                her he had help with the idea and Eumi shared that she was so excited at the change of pace she wore her
-                lucky skirt. Both were so charmed by each that they pocketed the story for this moment.</p>
+            <h3>ON FIRST DATES</h3>
+            <p>When Eumi agreed to a date, Nathan rushed to his local coffee shop and asked the other regulars for
+                recommendations. The consensus was the High Line. Eumi was impressed when Nathan didn’t suggest the
+                typical Tinder date at a bar. On the date, Nathan sweetly shared that he’d had help in brainstorming;
+                Eumi, charmed by his candor, shared that she was wearing her lucky skirt. </p>
             <br>
-            <h3>TINY STORY 2</h3>
-            <p>One night a truce was called. Over the years Nathan and Eumi had been slipping each other the
-                better half of things: the cheesier slice of pizza, the fuller glass of juice. But things had come to a
-                head. They both pretended not to want the same cookie so that the other could eat it, and the stalemate
-                became literal. Learning from this, they agreed to be honest from then on, though each is convinced the
-                other is still sneaking them the better half.</p>
+            <h3>ON BEING EACH OTHER'S BETTER HALF</h3>
+            <p>Over the years Nathan and Eumi have each been slipping the other the better half: the cheesier slice of
+                pizza, the fuller glass of juice. One night a truce was called. They both pretended not to want the same
+                cookie so that the other could eat it. The stalemate became literal when neither ate it and the cookie
+                went stale. Learning from this, they agreed to be honest from then on (though they’re absolutely still
+                sneaking the other the better half). </p>
             <br>
-            <h3>CURRENT TINY STORY</h3>
-            <p>Big changes are happening. Nathan is moving to Philadelphia to jump-start a new career. Eumi is moving
-                to Queens. Despite the distance, we are looking forward to coming back together and celebrating our
-                wedding with all of you.</p>
+            <h3>ON TO NEW ADVENTURES</h3>
+            <p>Big changes are happening. Nathan is starting a new career; Eumi is continuing to explore her creativity.
+                Nathan is moving to Philadelphia; Eumi is moving to Queens. Despite the distance, we are looking
+                forward to coming back together and celebrating our wedding with all of you.</p>
         </article>
     </article>
     <div class="item imageContainer" id="nathan-eumi">
@@ -68,24 +68,30 @@
     </div>
     <article class="item text" id="text-three">
         <article class="text-box" id="location">
-            <h2>WHEREABOUTS</h2>
+            <h2>THE DETAILS</h2>
             <hr/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</p>
+            <h3>WHEREABOUTS</h3>
+            <p>Ceremony, cocktail hour, and reception at <a href="https://www.porticoawbury.com/about">Portico Awbury
+                Arboretum</a>.</p>
             <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</p>
+            <h3>WHENABOUTS</h3>
+            <p>Saturday, May 21, 2022</p>
+            <p>4:00pm to 10:00pm</p>
         </article>
     </article>
-    <div class="item imageContainer" id="venue"></div>
+    <div class="item imageContainer" id="venue">
+        <div id="tile-one">
+            <img id="house-image" src="assets/HouseArtboard-2.png">
+            <div class="map" id="map"></div>
+        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj5EsQojw8FwkmXD2BDjYTfS9FAsM7kfQ&callback=initMap&libraries=&v=weekly"
+                async></script>
+    </div>
     <footer id="footer-text">MORE TO COME</footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+<script src="javascript/index.js"></script>
 <script>
     var individualLetters = document.querySelector('.dancing');
     individualLetters.innerHTML = individualLetters.textContent.replace(/\S/g, "<span class='dancers'>$&</span>");

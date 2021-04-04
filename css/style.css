@@ -9,7 +9,7 @@
     display: grid;
     /* overflow: hidden; */
     grid-template-columns: minmax(494px, calc(50% - 50px)) 100px minmax(494px, calc(50% - 50px));
-    grid-template-rows: minmax(671px, 100vh) minmax(670px, 70vh) minmax(670px, 70vh) 10vh;
+    grid-template-rows: minmax(671px, 100vh) minmax(670px, 70vh) minmax(720px, 80vh) 10vh;
     grid-template-areas:
         "celebrate arrow landing"
         "photo arrow about"
@@ -127,7 +127,7 @@ hr {
 }
 
 #our-story {
-    margin-left: 5%;
+    margin-left: 3%;
     margin-right: 5%;
 }
 
@@ -147,8 +147,12 @@ footer {
     white-space: nowrap;
     margin-left: -105%;
     margin-right: -100%;
-    margin-top: 30px;
+    margin-top: 50px;
 
+}
+
+a {
+    color: black;
 }
 
 /* images */
@@ -190,4 +194,22 @@ svg{
     font-size: 20px;
     color: transparent;
     white-space: nowrap;
+}
+
+#house-image{
+    z-index: 0;
+    width: 460px;
+    height: 400px;
+    position: relative;
+    top: 120px;
+}
+
+#map{
+    height: 300px;
+    width: 450px;
+    border: 10px solid white;
+    position: relative;
+    z-index: 1;
+    top: -20px;
+    left: 130px;
 }
