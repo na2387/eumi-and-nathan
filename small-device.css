@@ -11,7 +11,15 @@
  }*/
 
 #landing{
-    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-bottom: 90px;
+    background-image: url("./assets/orange_mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 1200px;
+    background-position-y: center;
+    background-position-x: -90px;
 }
 
 #our-story{
@@ -34,6 +42,11 @@ svg{
 
 #cream{
     left: 8%;
+    height: 800px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -140px;
 }
 
 #swiped-right{
@@ -45,8 +58,19 @@ svg{
     margin-right: 8%;
 }
 
+#hotelView{
+    left: 8%;
+}
+
+#text-four{
+    margin-top: 27px;
+    margin-left: 6%;
+    margin-right: 8%;
+}
+
 #tile-one{
     margin-left: 8%;
+    margin-top: -8%;
 }
 
 #house-image{
@@ -67,12 +91,24 @@ footer{
 
 #arrow{
     display: none;
+}
 
+#image-and-text{
+    height: 600px;
+    position: relative;
 }
 
 #nathan-eumi{
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+}
+
+#text-animation{
+    display: none;
+}
+
+#svg-viewbox{
+    display: none;
 }
 
 /*iphone 12 & pro*/
@@ -317,81 +353,4 @@ and (-webkit-device-pixel-ratio: 3) {
             font-size: 25px;
             margin-top: 100px
         }
-    }
-
-    /* androids */
-    @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){
-        .container{
-            display: grid;
-            overflow: hidden;
-            grid-template-columns: 100%;
-            grid-template-rows: 600px 900px 1950px 1100px 600px 1000px 200px; /*50vh 50vh 50vh 50vh 10vh*/
-            grid-template-areas:
-        "celebrate"
-        "landing"
-        "about"
-        "photo"
-        "location"
-        "landscapePhoto"
-        "MTK";
-        }
-
-        /* #text-one{
-             margin-bottom: -50%;
-             margin-top: -60%;
-         }*/
-
-        #landing{
-            margin-bottom: 30px;
-        }
-
-        #our-story{
-            margin-left: 8%;
-            margin-right: 8%;
-        }
-
-        #swiped-right{
-            margin-left: 8%;
-            margin-right: 8%;
-        }
-
-        #tile-one{
-            margin-left: 15%;
-        }
-
-        svg{
-            min-height: 970px;
-        }
-
-        #cream{
-            left: 8%;
-        }
-
-        #swiped-right{
-            display: none;
-        }
-
-        #location{
-            margin-left: 8%;
-            margin-right: 8%;
-        }
-
-        #tile-one{
-            margin-left: 8%;
-        }
-
-        #house-image{
-            width: 660px;
-            height: 600px;
-        }
-
-        #map{
-            width: 680px;
-            height: 500px;
-        }
-
-        footer{
-            font-size: 25px;
-            margin-top: 100px
-        }
-    }
+    }}
